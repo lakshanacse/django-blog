@@ -28,9 +28,9 @@
 
 
                     <!-- Comments -->
-                    {% comment %} <h4>Comments ({{ comment_count }})</h4>
+                    <h4>Comments ({{comment_count}})</h4>
                     {% if comments %}
-                        {% for comment in comments %}
+                      {% for comment in comments %}
                             <div class="card mt-1">
                                 <div class="card-body">
                                     <p class="card-text mb-0">{{ comment }}</p>
@@ -45,7 +45,7 @@
                     No comments yet.
                     {% endif %}
                     <br>
-                    <div class="form-group">
+                     <div class="form-group">
                         {% if user.is_authenticated %}
                         <form action="" method="POST">
                             {% csrf_token %}
@@ -57,8 +57,8 @@
                         </form>
                         {% else %}
                         <p>Please <span><a href="{% url 'login' %}">login</a></span> to write a comment!</p>
-                        {% endif %}
-                    </div> {% endcomment %}
+                        {% endif %} 
+                    </div>  
 
                 </section>
             </article>
